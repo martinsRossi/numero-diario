@@ -5,32 +5,14 @@ alert("Bem vindo ao jogo de adivinhação!");
 //   }
 
 let numeroSecreto = 5;
-let numeroLimite = 10;
-let jogadasPermitidas = 10;
-let tentativas = jogadasPermitidas;
+var numeroLimite = 10;
+var jogadasPermitidas = 10;
+var tentativas = 0;
+var jogadasRestantes = jogadasPermitidas - tentativas;
+var chute;
 
-for (var i = 0; i = numeroSecreto; i++){
-    alert("Você tem " + tentativas + " vezes para tentar");
-    let chute = prompt("Escolha um número entre 1 e " + numeroLimite + ".");
-    
-    // if (i == jogadasPermitidas) {
-    //     alert("Infelizmente, você perdeu :(. Tente novamente.")
-    // }
-    if (chute >= 30) {
-        alert("Você digitou um número maior do que o permitido: (" + numeroLimite + "). Digite outra vez");
-    } else {
-    if (numeroSecreto < chute) {
-        alert("O numero é menor!");
-        i++;
-        tentativas = jogadasPermitidas - i;
-        
-      } else if (numeroSecreto > chute) {
-        alert("O numero é maior!");
-        i++;
-        tentativas = jogadasPermitidas - i;
-      } else {
-        break
-      }
-    }
-  }
-
+if (chute == numeroSecreto) {
+    alert(`Isso ai! Voce descobriu o numero secreto ${numeroSecreto}`);
+} else {
+    alert("Voce errou :(");
+}
